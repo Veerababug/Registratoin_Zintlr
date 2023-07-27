@@ -1,6 +1,7 @@
 package Base;
 
 import org.testng.ITestContext;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -20,6 +21,7 @@ public class Base_Class  extends Application_Keyword{
 	
 	@BeforeTest(alwaysRun = true)
 	public void beforeTest(ITestContext context ) throws Exception {
+		
 		 report = ExtentManager.generateReports();
 		 test = report.createTest(context.getCurrentXmlTest().getName());
 		 test.log(Status.INFO, "Starting the  "+context.getCurrentXmlTest().getName());
@@ -35,7 +37,8 @@ public class Base_Class  extends Application_Keyword{
 	}
 	
 	@BeforeMethod(alwaysRun = true)
-	public void beforeMethod(ITestContext context) {
+	public void beforeMethod(ITestContext context) throws Exception {
+		ScreenRecorderUtil.startRecord(context.getCurrentXmlTest().getName());
 		test = (ExtentTest) context.getAttribute("tests");
 		
 		application = (Application_Keyword) context.getAttribute("app");	
@@ -45,7 +48,7 @@ public class Base_Class  extends Application_Keyword{
 	}
 	
 	@AfterTest
-	public void afterTest(ITestContext context) {
+	public void afterTest(ITestContext context) throws Exception {
 		application = (Application_Keyword) context.getAttribute("app");	
 		if(application!=null)
 		application.quit();
@@ -53,12 +56,13 @@ public class Base_Class  extends Application_Keyword{
 		report=(ExtentReports) context.getAttribute("rep");
 		if(report!=null)
 			report.flush();
+		
+		
 	} 
 	
-	
 	@AfterSuite
-	public void afterSuite(ITestContext context) {
-		
+	public void afterSuite(ITestContext context) throws Exception {
+		ScreenRecorderUtil.stopRecord();
 	}
 	
 

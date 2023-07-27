@@ -16,6 +16,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -41,10 +42,13 @@ public void launchBrowser(String browser) {
 		
 	if(browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
+//			ChromeOptions cp = new ChromeOptions();
+//			cp.addArguments("--incognito");
+//			cp.setAcceptInsecureCerts(true);
+//			DesiredCapabilities dsp = new DesiredCapabilities();
+//			dsp.setCapability(ChromeOptions.CAPABILITY, cp);
+//			cp.merge(dsp);
 			driver = new ChromeDriver();
-			ChromeOptions cp = new ChromeOptions();
-			cp.setAcceptInsecureCerts(true);
-			cp.addArguments("--remote-allow-origins=*");
 		}else if(browser.equals("mozilla")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();

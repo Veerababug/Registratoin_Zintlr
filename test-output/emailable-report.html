@@ -9,10 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Zintrl Suite</th></tr>
-<tr><td><a href="#t0">Register at Zintrl</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">27,875</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Register at Zintrl</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">48,679</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Zintrl Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Register at Zintrl &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testcases.Register</td><td><a href="#m0">create_Account</a></td><td rowspan="1">1690454939848</td><td rowspan="1">25508</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Zintrl Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Register at Zintrl &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testcases.Register</td><td><a href="#m0">create_Account</a></td><td rowspan="1">1690466400405</td><td rowspan="1">44828</td></tr></tbody>
 </table>
-<h2>Register at Zintrl</h2><h3 id="m0">testcases.Register#create_Account</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Register at Zintrl</h2><h3 id="m0">testcases.Register#create_Account</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Cannot find elements when the class name expression is null.
+	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
+	at org.openqa.selenium.By$ByClassName.&lt;init&gt;(By.java:304)
+	at org.openqa.selenium.By.className(By.java:99)
+	at utility.Generic_Keyword.getLocator(Generic_Keyword.java:131)
+	at utility.Generic_Keyword.presenceOfElement(Generic_Keyword.java:113)
+	at utility.Generic_Keyword.getElement(Generic_Keyword.java:89)
+	at utility.Generic_Keyword.click(Generic_Keyword.java:70)
+	at testcases.Register.create_Account(Register.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

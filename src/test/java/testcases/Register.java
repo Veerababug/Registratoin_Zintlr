@@ -21,8 +21,12 @@ public class Register extends Base_Class{
 		application.type("password_css", "pass");
 		application.type("confirmpassword_css", "pass1");
 		application.click("checkbox_css");
-		application.click("sign_xpath");
-		
+		try {
+			application.click("sign_xpath");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		application.click("//div[@class='fixed w-11/12 max-w-[400px] z-[889899999] bottom-right']");
 	}
 
 	

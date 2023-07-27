@@ -7,9 +7,11 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import Base.ScreenRecorderUtil;
 import utility.Generic_Keyword;
 
 public class MyTestResult implements ITestListener{
+	
 	
 
 	public void onTestSuccess(ITestResult result) {
@@ -33,8 +35,6 @@ public class MyTestResult implements ITestListener{
 		//GenericKeyword.generateScreenshots();
 	}
 
-	public void onFinish(ITestContext context) {
-		
-	}
+
 
 }

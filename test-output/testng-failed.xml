@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Zintrl Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Listener.MyTestResult"/>
+  </listeners>
+  <test thread-count="5" name="Register at Zintrl(failed)">
+    <classes>
+      <class name="testcases.Register">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterSuite"/>
+          <include name="create_Account"/>
+          <include name="afterTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- testcases.Register -->
+    </classes>
+  </test> <!-- Register at Zintrl(failed) -->
+</suite> <!-- Failed suite [Zintrl Suite] -->

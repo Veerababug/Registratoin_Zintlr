@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Zintrl Suite">
+	<listeners>
+<listener class-name="Listener.MyTestResult"/>
+</listeners>
+  <test  name="Register at Zintrl">
+	  <classes>
+		  <class name="testcases.Register">
+			  <methods>
+				  <include name="create_Account"></include>
+			  </methods>
+		  </class>
+	  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
